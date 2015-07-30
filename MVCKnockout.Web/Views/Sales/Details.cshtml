@@ -1,0 +1,35 @@
+﻿@model MVCKnockout.Web.ViewModels.SalesOrderViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<p>@Html.DisplayFor(model => model.MessageToClient)</p>
+<div>
+    <h4>SalesOrder</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PONumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PONumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SalesOrderId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
