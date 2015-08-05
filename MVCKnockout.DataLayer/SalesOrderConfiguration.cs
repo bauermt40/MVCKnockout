@@ -14,6 +14,7 @@ namespace MVCKnockout.DataLayer
         {
             Property(so => so.CustomerName).HasMaxLength(30).IsRequired();
             Property(so => so.PONumber).HasMaxLength(10).IsOptional();
+            Ignore(so => so.ObjectState);
         }
     }
 }
